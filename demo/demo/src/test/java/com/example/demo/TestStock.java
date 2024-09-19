@@ -41,8 +41,18 @@ public class TestStock {
     }
 
     @Test
-    public void modificar(){
-        
+    public void modificarFail(){
+        producto producto = null;
+        assertFalse(stock.modificarProducto(producto,20));
+
     }
+
+    @Test
+    public void modificar(){
+        producto producto = new producto("xbox",200,20,"especial");
+        productos.put()
+        assertTrue(stock.modificarProducto(producto,10));
+    }
+
 
 }

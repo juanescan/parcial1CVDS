@@ -29,7 +29,26 @@ public class stock {
 
     }
 
-    public void modificar(){
 
+    public boolean modificarProducto(producto producto, int cantidad) {
+        if (producto == null || !productos.containsKey(producto) || cantidad < 0) {
+            return false;
+        }
+        productos.put(producto, cantidad);
+        notificarAgentes(producto, cantidad);
+        return true;
     }
+
+    private void notificarAgentes(producto producto, int cantidad) {
+        System.out.println("Unidades disponibles de " + producto.getName() + ": " + cantidad);
+
+        if (cantidad < 5) {
+            System.out.println("Alerta: menos de 5 unidades disponibles para " + producto.getName());
+        }
+    }
+
+    public Map<producto, Integer> getProductos() {
+        return productos;
+    }
+
 }
