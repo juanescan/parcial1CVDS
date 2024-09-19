@@ -20,11 +20,16 @@ public class stock {
             if (existingProducto.getName().equals(producto.getName())){
                 return false;
             }
+            else{
+                return true;
+            }
         }
         productos.put(producto, 1);
         return true;
 
     }
 
-    
+    public void modificar(){
+
+    }
 }

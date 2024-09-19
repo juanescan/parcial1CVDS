@@ -26,4 +26,23 @@ public class TestStock {
         assertFalse(stock.AddProducto(producto1));
     }
 
+    @Test
+    public void testAddProductoNull(){
+        producto producto = null;
+        assertFalse(stock.AddProducto(producto));
+    }
+
+    @Test
+    public void testAddTwoProductos(){
+        producto producto = new producto("xbox",200,20,"especial");
+        producto producto1 = new producto("leche",100,2,"especial");
+        stock.AddProducto(producto);
+        assertTrue(stock.AddProducto(producto1));
+    }
+
+    @Test
+    public void modificar(){
+        
+    }
+
 }
