@@ -70,4 +70,12 @@ public class TestStock {
     }
 
 
+    @Test
+    public void cantidadNegativa(){
+        producto producto = new producto("xbox",200,20,"especial");
+        stock.AddProducto(producto);
+        assertFalse(stock.modificarProducto(producto,-3));
+    }
+
+
 }
