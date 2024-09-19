@@ -50,8 +50,23 @@ public class TestStock {
     @Test
     public void modificar(){
         producto producto = new producto("xbox",200,20,"especial");
-        productos.put()
+        stock.AddProducto(producto);
         assertTrue(stock.modificarProducto(producto,10));
+    }
+
+    @Test
+    public void menorAcuatro(){
+        producto producto = new producto("xbox",200,20,"especial");
+        stock.AddProducto(producto);
+        assertTrue(stock.modificarProducto(producto,3));
+    }
+
+    @Test
+    public void KeynoContains(){
+        producto producto = new producto("xbox",200,20,"especial");
+        producto producto2 = new producto("nevera",200,20,"especial");
+        stock.AddProducto(producto);
+        assertFalse(stock.modificarProducto(producto2,10));
     }
 
 
