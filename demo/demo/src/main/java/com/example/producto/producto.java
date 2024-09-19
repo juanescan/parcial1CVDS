@@ -1,3 +1,4 @@
+package com.example.producto;
 public class producto {
     private final String name;
     private final int precio;
@@ -9,7 +10,21 @@ public class producto {
         this.precio = precio;
         this.cantidad = cantidad;
         this.categoria = categoria;
+    }
 
+    public int getCantidad() {
+        return cantidad;
+    }
 
+    public int getPrecio() {
+        return precio;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public String getName(){
+        return name;
     }
 }
